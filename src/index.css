@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+}
+
+[data-theme="dark"] {
+  --bg-color: #222;
+  --text-color: #fff;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background dark:bg-background-dark text-textMain dark:text-textMain-dark transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-greyDark rounded-lg shadow-lg transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-secondary font-medium px-6 py-2 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-dark text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200;
+  }
+}
