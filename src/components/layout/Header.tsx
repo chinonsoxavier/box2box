@@ -1,8 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo-black.svg";
 import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
 const Header = () => {
+    const location = useLocation();
+
+  const BottomIndicator = ({isActive}:{isActive:boolean}) =>
+   isActive && (<span className="absolute top-6 rounded border-accent w-3 border-3"></span>);
+
   const routes = [
     {
       name: "Home",
@@ -31,8 +36,8 @@ const Header = () => {
   ];
 
   return (
-    <div className="center h-25">
-      <div className="h-[57px] max_width mx-auto flex items-center justify-between">
+    <div className="center h-25 max_width mx-auto">
+      <div className="h-[57px] max_width px-5 mx-auto flex items-center justify-between">
         <div className="flex items-center justify-start">
           <img src={logo} alt="logo" className="max-w-[144px] w-full" />
         </div>
@@ -50,7 +55,7 @@ const Header = () => {
                 }
               >
                 {route.name}
-                {({ isActive }) => isActive && <span className="absolute top-6 rounded border-accent w-3 border-3"></span>}
+                 <BottomIndicator isActive={location.pathname === route.link} />                 
               </NavLink>
             ))}
           </nav>
@@ -58,6 +63,7 @@ const Header = () => {
           <Switch />
 
           <Button>Login</Button>
+          <Button variant="secondary"  className="h-14" >Download App</Button>
         </div>
       </div>
     </div>
