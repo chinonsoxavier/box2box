@@ -1,8 +1,12 @@
+import Landing from "./pages/landing";
+import {BrowserRouter,Route,Routes} from "react-router-dom"
 function App() {
   return (
-    <div className="text-4xl font-bold underline text-center text-textPrimary">
-      Welcome to Box2Box
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Landing/>} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
