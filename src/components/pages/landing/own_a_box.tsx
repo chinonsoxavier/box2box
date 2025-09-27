@@ -37,11 +37,11 @@ const OwnABox = () => {
           </p>
         </div>
 
-        <div className="flex items-center flex-col md:flex-row gap-10 justify-center">
+        <div className="flex items-center flex-col smedium:flex-row gap-10 justify-center">
           <div className="flex-1 max-w-[647px]">
             <img src={womanImage} alt="" className="rounded-[50px]" />
           </div>
-          <div className="grid md:hidden grid-cols-2 grid-row-3">
+          <div className="grid items-start justify-start grid-flow-row-dense md:grid-cols-1 md:hidden grid-cols-2 grid-row-3 grid-flow-row-densemd:grid-cols-3">
             {data.map((item, index) => (
               <div
                 style={{
@@ -49,13 +49,17 @@ const OwnABox = () => {
                   color: item.color !== "#FFDD5F" ? "#EFF2F3" : "#121314",
                 }}
                 key={index}
-                className={`${index+1 % 2 ? 'row-span-1' : 'row-span-2' } rounded-[21.33px] px-[21.3px] pt-[21.3px] pb-[32px] flex-1 flex-col items-start justify-center gap-5 bg-[${item.color}] m-2 min-w-[230px]`}
+                className={`${
+                  index === 0 || index === data.length - 1 ? "" : ""
+                } rounded-[21.33px] px-[21.3px] pt-[21.3px] pb-[32px] flex-1 flex-col items-start justify-center gap-5 bg-[${
+                  item.color
+                }] m-2 h-max min-w-[230px]`}
               >
                 <p className="md:text-[34.67px] font-semibold text-left text-[20px]">
                   {item.label}
                 </p>
 
-                <p className="text-sm text-[#EFF2F3]">{item.desc}</p>
+                <p className="text-sm text-left text-[#EFF2F3]">{item.desc}</p>
                 {index + (1 % 2) && (
                   <div className="flex items-center justify-between">
                     <p>Become an Owner</p>

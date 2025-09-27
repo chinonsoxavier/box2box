@@ -7,6 +7,7 @@ import  person2 from "../../../assets/images/person2.svg";
 import  person3 from "../../../assets/images/person3.svg";
 import imageBg from "../../../assets/images/Basemap image.svg";
 import { cn } from "@/lib/utils";
+import star from "../../../assets/icons/star.svg"
 
 
 const mapLocationPin = (className: string) => (
@@ -31,23 +32,23 @@ const Hero = () => {
     <div className="overflow-x-hidden bg-[#F8F7F7]">
       <Header />
 
-      <div className="max_width  h-full flex-wrp items-stretch flex overflo-hidden flex-col md:flex-row">
-        <div className="space-y-7 h-full flex my-auto items-start flex-col justify-center max-w-[721px]">
+      <div className="max_width  h-full items-stretch flex overflo-hidden gap-10 flex-col medium:flex-row">
+        <div className="space-y-7 h-full flex my-auto items-center medium:items-start flex-col justify-center medium:max-w-[721px]">
           {/* Header */}
-          <div className="text-left">
-            <p className="text-accent text-center md:text-left text-sm md:text-xl mb-5">
+          <div className="">
+            <p className="text-accent text-center medium:text-left text-sm md:text-xl mb-5">
               #1 FAST DELIVERY APP
             </p>
 
             {/* Main Headline */}
-            <h1 className="md:text-[64px] text-center md:text-left text-[40px] md:text-6xl font-bold text-black mb-4 leading-[85px]">
+            <h1 className="md:text-[64px] text-center medium:text-left text-[40px] md:text-6xl font-semibold text-primary-foreground mb-4 leading-[85px]">
               Smarter & Effortless
-              <span className="text-accent">Delivery </span>
+              <span className="text-accent"><i> Delivery </i></span>
               Starts Here
             </h1>
 
             {/* Description */}
-            <p className="text-primary-foreground text-center md:text-left text-base md:text-xl leading-[26px]">
+            <p className="text-primary-foreground text-center medium:text-left text-base md:text-xl leading-[26px]">
               Find the Box2Box lockers nearest to you and get your items
               delivered fast, track your delivery in real time, and pick up your
               package whenever it's convenient.
@@ -96,7 +97,7 @@ const Hero = () => {
 
             {/* Rating */}
             <div className="flex items-center justify-start w-full gap-2">
-              {/* <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" /> */}
+              <img src={star} className="w-5 h-5"/>
               <span className="font-medium text-sm md:text-lg text-primary-foreground">
                 4.5
               </span>
@@ -108,7 +109,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative left-[100px] overflow-x-hidden -ml-[100px] botom-[100px] z-0">
+        <div className="relative left-[100px] overflow-x-hidden -ml-[100px] z-0">
           {mapLocationPin("left-[22%]")}
           {mapLocationPin("right-[25%] top-[12%]")}
           {mapLocationPin("right-[33%] top-[49%]")}
@@ -116,7 +117,7 @@ const Hero = () => {
           {mapLocationPin("right-[37%] top-[83%]")}
           <img
             src={imageBg}
-            className="h-[882px] w-[1490px] object-"
+            className="medium:h-[882px] medium:w-[1490px] object-"
             alt="image bg"
           />
         </div>

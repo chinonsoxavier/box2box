@@ -48,11 +48,11 @@ const Testimonials = () => {
         <div className="flex gap-5 flex-col overflow-clip">
           <div className="flex items-center justify-end overflow-hidden w-full">
         
-            <div className="flex gap-5 testimonials-animatio w-full">
+            <div className="flex flex-wrap gap-5 testimonials-animatio w-full">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="flex bg-[#cbcdcd]/20 flex-col items-start py-6.5 px-5 gap-2.5 rounded-[12px] p-5 border max-w-[435px]"
+                  className="flex bg-[#cbcdcd]/20 flex-col items-start py-6.5 px-5 gap-2.5 rounded-[12px] p-5 border flex-1 min-w-[240px]"
                 >
                   <img src={quotes} alt="quotes" />
                   <p className="text-base text-left md:text-[22px] text-secondary-foreground">
@@ -79,7 +79,7 @@ const Testimonials = () => {
           </div>
           <div className="flex overflow-hidden">
 
-            <div className="flex gap-5 items-center justify-end testimonials-animation-invert">
+            {/* <div className="flex gap-5 items-center justify-end testimonials-animation-invert">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -106,7 +106,7 @@ const Testimonials = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

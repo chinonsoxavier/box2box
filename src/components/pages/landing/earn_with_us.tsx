@@ -5,7 +5,7 @@ import passiveIncome from "../../../assets/images/passive income.svg";
 import wealth from "../../../assets/images/wealth.svg";
 import wealthgrowth from "../../../assets/icons/increase.svg";
 import unlockIcon from "../../../assets/icons/unlock.svg";
-import checkIcon from "../../../assets/icons/guardCheckIcon.svg"
+import checkIcon from "../../../assets/icons/guardCheckIcon.svg";
 import smartTechImage from "../../../assets/images/smart tech.svg";
 
 const EarnWithUs = () => {
@@ -14,7 +14,7 @@ const EarnWithUs = () => {
       <div className="max_width text-center flex items-center justify-center gap-10 flex-col">
         <div className="flex items-center justify-center gap-2.5 flex-col">
           <p className="text-sm md:text-lg text-accent">
-            FAST. SIMPLE. EFFICIENT?
+            EARN WITH EVERY DELIVERY
           </p>
 
           <h3 className="text-[28px] font-semibold md:text-[40px] text-primary-foreground">
@@ -27,9 +27,9 @@ const EarnWithUs = () => {
             from every delivery or storage session.
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-11 item-e gap-5 w-full align-items-start items-start">
+        <div className="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 gap-5 w-full items-start">
           {/* First Item */}
-          <div className="rounded-[30px] bg-secondary ma-h-[666px] row-span-5 flex flex-col justify-between pt-6 px-6">
+          <div className="rounded-[30px] h-full bg-secondary flex flex-col justify-between pt-6 px-6">
             <div className="flex flex-col items-center gap-6 max-w-[512px] mx-auto my-3">
               <div className="relative flex flex-col items-center">
                 <img
@@ -61,7 +61,7 @@ const EarnWithUs = () => {
           </div>
 
           {/* Second Item (Slightly Taller) */}
-          <div className="rounded-[30px] row-span-6 max-h-[762px] bg-[#CBCDCD]/20 flex flex-col p-5">
+          <div className="rounded-[30px] h-full max-h-[762p] bg-[#CBCDCD]/20 flex flex-col p-5">
             <div className="max-w-[606px] my-7.5 mx-auto">
               <img
                 src={wealth}
@@ -70,7 +70,7 @@ const EarnWithUs = () => {
               />
             </div>
             <div className="flex flex-col mt-10 items-center gap-4">
-              <div className="bg-[#06545B] rounded-full w-[40.99px] h-[40.99px] md:w-[70px] md:h-[70px] flex items-center justify-center">
+              <div className="bg-[#06545B] p-2 rounded-full w-[40.99px] h-[40.99px] md:w-[70px] md:h-[70px] flex items-center justify-center">
                 <img src={unlockIcon} alt="unlock icon" />
               </div>
               <div className="flex flex-col items-start gap-[15px]">
@@ -91,7 +91,7 @@ const EarnWithUs = () => {
           </div>
 
           {/* Third Item (Slightly Taller) */}
-          <div className="rounded-[30px] row-span-6 max-h-[762px] bg-[#CBCDCD]/20 flex flex-col p-5">
+          <div className="rounded-[30px] h-full max-h-[762p] bg-[#CBCDCD]/20 flex flex-col p-5">
             <div className="w-full flex justify-center">
               <img
                 src={partnerImage}
@@ -111,7 +111,7 @@ const EarnWithUs = () => {
           </div>
 
           {/* Fourth Item */}
-          <div className="rounded-[30px] row-span-5 bg-secondary h-full ma-h-[666px] flex flex-col justify-between p-5 -mt-5">
+          <div className="rounded-[30px] bg-secondary h-full flex flex-col justify-between p-5">
             <div className="flex flex-col gap-[33px]">
               <div className="bg-[#EFFAF6] rounded-full h-[40.99px] w-[40.99px] md:h-[70px] md:w-[70px] flex items-center justify-center">
                 <img src={checkIcon} alt="check icon" />

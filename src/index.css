@@ -136,7 +136,7 @@
 
 .max_width{
   width: 100%;
-  @apply max-w-[1346px] mx-auto px-8;
+  @apply max-w-[1346px] mx-auto px-4 md:px-8;
 }
 
 .center{

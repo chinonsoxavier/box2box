@@ -26,7 +26,7 @@ export function ModeToggle() {
         className={`absolute left-3 top-1/2 transform -translate-y-1/2 transition-opacity duration-300`}
       />
       <div
-        className={`w-[34px] h-[34px] bg-secondary rounded-full absolute transition-all duration-700 ${
+        className={`w-[34px] h-[34px] bg-secondary rounded-full absolute transition-all duration-1000 ${
           theme === "light" ? "left-[calc(100%-38px)]" : "left-1"
         }`}
       ></div>

@@ -1,4 +1,5 @@
 import { Footer } from "@/components/layout/footer"
+import SideMenu from "@/components/layout/sidemenu"
 import EarnWithUs from "@/components/pages/landing/earn_with_us"
 import Faqs from "@/components/pages/landing/faqs"
 import GetStarted from "@/components/pages/landing/get_started"
@@ -12,6 +13,10 @@ import WhyUs from "@/components/pages/landing/why_us"
 const Landing = () => {
   return (
     <div>
+
+        {/* sidemenu */}
+        <SideMenu/>
+
         {/* hero */}
         <Hero/>
 

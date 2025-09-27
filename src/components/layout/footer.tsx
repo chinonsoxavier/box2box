@@ -7,7 +7,7 @@ import footerName from ".././../assets/images/footer name.svg"
 import caretUp from "../../assets/icons/caret up.svg"
 export function Footer() {
   return (
-    <footer className=" py-12 center flex-col">
+    <footer className=" py-12 center flex-col max_width">
       <div className="bg-[#CBCDCD]/20 py-[23px] md:py-17.5 max_width border rounded-[30px]">
         <div className="flex flex-col md:flex-row gap-8 mb-8">
           {/* Left section - Logo and description */}
@@ -57,7 +57,7 @@ export function Footer() {
 
           {/* Center section - Quick Links */}
           <div className="flex-1" >
-            <div className="flex items-center justify-betwee">
+            <div className="flex items-center justify-between">
               <h3 className="md:text-2xl text- font-semibold text-primary-foreground mb-4">
                 Quick Links
               </h3>

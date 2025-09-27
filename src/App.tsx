@@ -1,4 +1,4 @@
-import Landing from "./pages/landing";
+import Landing from "./pages/landing/landing";
 import {BrowserRouter,Route,Routes} from "react-router-dom"
 function App() {
   return (

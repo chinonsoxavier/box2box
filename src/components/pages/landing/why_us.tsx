@@ -60,7 +60,7 @@ const WhyUs = () => {
           {whychooseus.map((reason, index) => (
             <div
               key={index}
-              className="flex border rounded-[12px] md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20"
+              className="flex border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center md:gap-5 gap-[16.8px] bg-[#CBCDCD]/20"
             >
               <img
                 src={reason.image}

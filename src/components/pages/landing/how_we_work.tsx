@@ -26,13 +26,13 @@ const HowWeWork = () => {
             service type and you’re good to go.
           </p>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(380px,1fr))] items-center basis-1/3 flex-wrap justify-center w-full gap-5">
-          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
-            <div className="center w-full bg-[#FFFFFF99]  md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19]">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(380px,1fr))] w-full gap-5">
+          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
+            <div className="center w-full bg-[#FFFFFF99]  md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px]">
               <img
                 src={actionImage}
                 alt={"action image"}
-                className="max-w-[312.04px] max-h-[288.76px] w-full h-full md:max-w-[348.5px] md:max-h-[322.06]"
+                className="max-w-[312.04px] max-h-[288.76px] w-full h-full md:max-w-[348.5px] md:max-h-[322.06px]"
               />
             </div>
             <p className="md:text-[30px] whitespace-nowrap text-primary-foreground text-[22px]">
@@ -51,12 +51,12 @@ const HowWeWork = () => {
             </Button>
           </div>
 
-          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
-            <div className="center w-full md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19]">
+          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
+            <div className="center w-full md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px]">
               <img
                 src={sizeAndLocationImage}
                 alt={"size and location image"}
-                className="max-w-[312.04px] max-h-[288.76px] w-full h-full md:max-w-[348.5px] md:max-h-[322.06]"
+                className="max-w-[312.04px] max-h-[288.76px] w-full h-full md:max-w-[348.5px] md:max-h-[322.06px]"
               />
             </div>
             <p className="md:text-[30px] whitespace-nowrap text-primary-foreground text-[22px]">
@@ -75,8 +75,8 @@ const HowWeWork = () => {
             </Button>
           </div>
 
-          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
-            <div className="center w-full bg-[#FFFFFF99]  md:py-[33.7px] py-[30.23] md:px-[28.1px] px-[25.19] relative">
+          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
+            <div className="center w-full bg-[#FFFFFF99]  md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] relative">
               <div className="center left-15 top-15 absolute bg-[#FFFFFF] rounded-full border-[.94] border-ssecondary md:w-[42px] md:h-[42px] h-[37.66px] w-[37.66px]">
                 <img src={guardIcon} alt="" />
               </div>

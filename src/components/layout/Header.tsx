@@ -2,10 +2,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo-black.svg";
 import { Button } from "../ui/button";
 import menu from "../../assets/icons/hamburg-menu.svg";
+import close from "../../assets/icons/close.svg";
 import { ModeToggle } from "../ThemeToggle";
+import useLandingStore from "@/pages/landing/landing_store";
 const Header = () => {
   const location = useLocation();
-
+  const { sideMenuOpen, toggleSideMenuOpen } = useLandingStore();
   const BottomIndicator = ({ isActive }: { isActive: boolean }) =>
     isActive && (
       <span className="absolute top-6 rounded border-accent w-3 border-3"></span>
@@ -63,7 +65,7 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hiddn sm:flex">
+          <div className="hidden xs:flex">
             <ModeToggle />
           </div>
 
@@ -76,8 +78,12 @@ const Header = () => {
           >
             Download App
           </Button>
-          <div className="block min-w-8 cursor-pointer xlarge:hidden">
-            <img src={menu} alt="menu" className="w-full" />
+          <div className="block min-w-8 cursor-pointer xlarge:hidden" onClick={toggleSideMenuOpen} >
+            {sideMenuOpen ? (
+              <img src={close} alt="close" className="w-full" />
+            ) : (
+              <img src={menu} alt="menu" className="w-full" />
+            )}
           </div>
         </div>
       </div>
