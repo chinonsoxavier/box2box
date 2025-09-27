@@ -79,7 +79,7 @@ const OwnABox = () => {
             ))}
           </div>
 
-          <div className="md:flex hidden flex-1 items-center justify-center flex-wrap">
+          <div className="md:grid hidden grid-cols-1 xlarge:grid-cols-2 flex-1 items-center justify-center flex-wrap">
             {data.map((item, index) => (
               <div
                 style={{
@@ -114,5 +114,5 @@ const OwnABox = () => {
     </section>
   );
 };
-
+ 
 export default OwnABox;

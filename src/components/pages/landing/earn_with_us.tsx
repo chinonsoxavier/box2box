@@ -27,15 +27,15 @@ const EarnWithUs = () => {
             from every delivery or storage session.
           </p>
         </div>
-        <div className="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 gap-5 w-full items-start">
+        <div className="md:grid flex flex-col grid-flow-rw grid-flow-row-dense grid-cols-1 md:grid-cols-2 grid-rows-11 item-e gap-5 w-full align-items-start items-start">
           {/* First Item */}
-          <div className="rounded-[30px] h-full bg-secondary flex flex-col justify-between pt-6 px-6">
+          <div className="rounded-[30px] h-full bg-secondary row-span-5 flex flex-col justify-between pt-6 px-6">
             <div className="flex flex-col items-center gap-6 max-w-[512px] mx-auto my-3">
               <div className="relative flex flex-col items-center">
                 <img
                   src={phoneIcon}
                   alt="phone icon"
-                  className="absolute left-14 bottom-[5%] z-0"
+                  className="absolute left-0 top-1/3 z-0"
                 />
                 <div className="w-[44.59px] h-[44.59px] md:w-[70px] md:h-[70px] rounded-full bg-[#EFFAF6] flex items-center justify-center z-30">
                   <img src={wallet} alt="wallet icon" />
@@ -61,8 +61,8 @@ const EarnWithUs = () => {
           </div>
 
           {/* Second Item (Slightly Taller) */}
-          <div className="rounded-[30px] h-full max-h-[762p] bg-[#CBCDCD]/20 flex flex-col p-5">
-            <div className="max-w-[606px] my-7.5 mx-auto">
+          <div className="rounded-[30px] h-full row-span-6 bg-[#CBCDCD]/20 flex flex-col p-5">
+            <div className="max-w-[606px] mx-auto">
               <img
                 src={wealth}
                 alt="grow wealth"
@@ -91,7 +91,7 @@ const EarnWithUs = () => {
           </div>
 
           {/* Third Item (Slightly Taller) */}
-          <div className="rounded-[30px] h-full max-h-[762p] bg-[#CBCDCD]/20 flex flex-col p-5">
+          <div className="rounded-[30px] h-full row-span-6 md:max-h-[762p] bg-[#CBCDCD]/20 flex flex-col p-5">
             <div className="w-full flex justify-center">
               <img
                 src={partnerImage}
@@ -111,7 +111,7 @@ const EarnWithUs = () => {
           </div>
 
           {/* Fourth Item */}
-          <div className="rounded-[30px] bg-secondary h-full flex flex-col justify-between p-5">
+          <div className="rounded-[30px] row-span-5 bg-secondary h-full flex flex-col justify-between p-5">
             <div className="flex flex-col gap-[33px]">
               <div className="bg-[#EFFAF6] rounded-full h-[40.99px] w-[40.99px] md:h-[70px] md:w-[70px] flex items-center justify-center">
                 <img src={checkIcon} alt="check icon" />
