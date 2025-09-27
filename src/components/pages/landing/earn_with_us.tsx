@@ -35,7 +35,7 @@ const EarnWithUs = () => {
                 <img
                   src={phoneIcon}
                   alt="phone icon"
-                  className="absolute left-0 top-1/3 z-0"
+                  className="absolute left-14 bottom-[5%] z-0"
                 />
                 <div className="w-[44.59px] h-[44.59px] md:w-[70px] md:h-[70px] rounded-full bg-[#EFFAF6] flex items-center justify-center z-30">
                   <img src={wallet} alt="wallet icon" />
