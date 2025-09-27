@@ -17,9 +17,9 @@
   --primary: oklch(0.205 0 0);
   --primary-foreground:#121314;
   --secondary: #FFDD5F;
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary-foreground: #35393B;
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted-foreground: #7B858A;
   --accent: #c6b218;
   --accent-foreground: #c6b218;
   --destructive: oklch(0.577 0.245 27.325);
@@ -136,16 +136,11 @@
 
 .max_width{
   width: 100%;
-  @apply max-w-[1346px];
+  @apply max-w-[1346px] mx-auto px-8;
 }
 
 .center{
   @apply flex items-center justify-center
-}
-
-p,span{
-  line-height: 100%;
-  letter-spacing: 0%
 }
 
 @layer base {
@@ -156,4 +151,40 @@ p,span{
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.testimonials-animation {
+  animation: NavBarAnimation 5s infinite linear;
+}
+
+@keyframes NavBarAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.testimonials-animation-invert {
+  animation: NavBarAnimation 5000ms infinite linear;
+}
+
+@keyframes NavBarAnimation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@theme {
+  --breakpoint-large: 1180px;
+  --breakpoint-xlarge: 1080px;
+  --breakpoint-medium: 980px;
+  --breakpoint-smedium: 880px;
+  --breakpoint-xs: 470px;
 }
