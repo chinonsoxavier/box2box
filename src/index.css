@@ -108,12 +108,12 @@
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --primary-foreground: #F7F9F9;
+  --secondary: #FFDD5F;
+  --secondary-foreground:#35393B;
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: #c6b218;
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -136,7 +136,7 @@
 
 .max_width{
   width: 100%;
-  @apply max-w-[1346px] mx-auto px-4 md:px-8;
+  @apply max-w-[1346px] mx-auto px-4 md:px-14;
 }
 
 .center{
@@ -154,22 +154,27 @@
 }
 
 .testimonials-animation {
-  animation: NavBarAnimation 5s infinite linear;
-}
-
-@keyframes NavBarAnimation {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
+  animation: Testimonials 15s infinite linear;
 }
 
 .testimonials-animation-invert {
-  animation: NavBarAnimation 5000ms infinite linear;
+  animation: TestimonialsInverse 15s infinite linear;
 }
+
+
+@keyframes Testimonials {
+  to {
+    transform: translateX(50%);
+  }
+}
+
+
+@keyframes TestimonialsInverse {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 
 @keyframes NavBarAnimation {
   from {
@@ -187,4 +192,5 @@
   --breakpoint-medium: 980px;
   --breakpoint-smedium: 880px;
   --breakpoint-xs: 470px;
+  --breakpoint-xxs: 430px;
 }

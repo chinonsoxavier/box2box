@@ -5,10 +5,11 @@ import twitter from '../../assets/icons/twitterIcon.svg';
 import linkedIn from "../../assets/icons/linkedinIcon.svg";
 import footerName from ".././../assets/images/footer name.svg"
 import caretUp from "../../assets/icons/caret up.svg"
+import Animate from "../animation/animate";
 export function Footer() {
   return (
     <footer className=" py-12 center flex-col max_width">
-      <div className="bg-[#CBCDCD]/20 py-[23px] md:py-17.5 max_width border rounded-[30px]">
+      <Animate className="bg-[#CBCDCD]/20 py-[23px] md:py-17.5 max_width border rounded-[30px]">
         <div className="flex flex-col md:flex-row gap-8 mb-8">
           {/* Left section - Logo and description */}
           <div className="space-y-4 flex-2 md:px-6">
@@ -173,10 +174,10 @@ export function Footer() {
             </a>
           </div>
         </div>
-      </div>
-      <div>
+      </Animate>
+      <Animate>
         <img src={footerName} alt="footer name" />
-      </div>
+      </Animate>
     </footer>
   );
 }

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import arrow from "../../../assets/icons/arrow-right.svg";
+import arrowDark from "../../../assets/icons/arrow-right-dark.svg";
 import radar from "../../../assets/images/radar.svg";
 import guardIcon from "../../../assets/icons/guard-icon.svg";
 import send from "../../../assets/icons/send.svg";
@@ -7,11 +8,16 @@ import scheduleIcon from "../../../assets/icons/schedule 1.svg";
 import padlockIcon from "../../../assets/icons/padlock 1.svg";
 import actionImage from "../../../assets/images/actions.svg";
 import sizeAndLocationImage from "../../../assets/images/size and location.svg";
+import Animate from "@/components/animation/animate";
+import { useTheme } from "@/hooks/useTheme";
 const HowWeWork = () => {
+
+    const {theme} = useTheme(); // Get current theme and setter
+
   return (
     <section className="py-10 sm:py-15 overflow-x-clip">
       <div className="max_width text-center flex items-center justify-center gap-10 flex-col">
-        <div className="flex items-center justify-center gap-2.5 flex-col">
+        <Animate className="flex items-center justify-center gap-2.5 flex-col">
           <p className="text-sm md:text-lg text-accent">
             FAST. SIMPLE. EFFICIENT?
           </p>
@@ -25,9 +31,9 @@ const HowWeWork = () => {
             just regular shopping, Box2Box makes it simple. Just choose your
             service type and you’re good to go.
           </p>
-        </div>
+        </Animate>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(380px,1fr))] w-full gap-5">
-          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
+          <Animate className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
             <div className="center w-full bg-[#FFFFFF99]  md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px]">
               <img
                 src={actionImage}
@@ -44,14 +50,18 @@ const HowWeWork = () => {
             </p>
 
             <Button
-              className="text-base w-min md:text-xl text-[#06545B]"
+              className="text-base w-min md:text-xl text-[#06545B] dark:text-[#129460]"
               variant="link"
             >
-              Learn More <img src={arrow} alt="arrow button" className="" />
+              Learn More{" "}
+              <img
+                src={theme === "dark" ? arrowDark : arrow}
+                alt="arrow button"
+              />
             </Button>
-          </div>
+          </Animate>
 
-          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
+          <Animate className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
             <div className="center w-full md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px]">
               <img
                 src={sizeAndLocationImage}
@@ -68,14 +78,18 @@ const HowWeWork = () => {
             </p>
 
             <Button
-              className="text-base md:text-xl w-min text-[#06545B]"
+              className="text-base md:text-xl w-min text-[#06545B] dark:text-[#129460]"
               variant="link"
             >
-              Learn More <img src={arrow} className="" alt="arrow button" />
+              Learn More{" "}
+              <img
+                src={theme === "dark" ? arrowDark : arrow}
+                alt="arrow button"
+              />
             </Button>
-          </div>
+          </Animate>
 
-          <div className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
+          <Animate className="flex h-full border rounded-[12px] md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] flex-1 flex-col items-start justify-center gap-5 bg-[#CBCDCD]/20 min-w-[230px]">
             <div className="center w-full bg-[#FFFFFF99]  md:py-[33.7px] py-[30.23px] md:px-[28.1px] px-[25.19px] relative">
               <div className="center left-15 top-15 absolute bg-[#FFFFFF] rounded-full border-[.94] border-ssecondary md:w-[42px] md:h-[42px] h-[37.66px] w-[37.66px]">
                 <img src={guardIcon} alt="" />
@@ -111,14 +125,22 @@ const HowWeWork = () => {
             </p>
 
             <Button
-              className="text-base md:text-xl w-min text-[#06545B]"
+              className="text-base md:text-xl w-min text-[#06545B] dark:text-[#129460]"
               variant="link"
             >
-              Learn More <img src={arrow} alt="arrow button" />
+              Learn More{" "}
+              <img
+                src={theme === "dark" ? arrowDark : arrow}
+                alt="arrow button"
+              />
             </Button>
-          </div>
+          </Animate>
         </div>
-        <Button className="max-w-[603px] h-[80px]">Download Box2Box App</Button>
+        <Animate className="w-full">
+          <Button className="max-w-[603px] h-[80px]">
+            Download Box2Box App
+          </Button>
+        </Animate>
       </div>
     </section>
   );

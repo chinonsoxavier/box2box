@@ -1,24 +1,11 @@
+import Animate from "@/components/animation/animate";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
-
-const Faqs = () => {
-  const variant = {
-    inactive: {
-      y: 50,
-      opacity: 0,
-    },
-    active: {
-      y: 0, // Fixed to match y property
-      opacity: 1,
-      transition: { duration: 1.5 },
-    },
-  };
-
+const Faqs = () => {    
   const faqs = [
     {
       title: "What is Box2Box and how does it work?",
@@ -67,7 +54,7 @@ const Faqs = () => {
   return (
     <section className="py-10 sm:py-15 overflow-x-clip">
       <div className="max_width text-center flex items-center justify-center gap-10 flex-col">
-        <div className="flex items-center justify-center gap-2.5 flex-col">
+        <Animate className="flex items-center justify-center gap-2.5 flex-col">
           <p className="text-sm md:text-lg text-accent">FAQ</p>
 
           <h3 className="text-[28px] font-semibold md:text-[40px] text-primary-foreground">
@@ -79,17 +66,10 @@ const Faqs = () => {
             riding, or owning a box, here’s everything you need to know about
             how Box2Box works.
           </p>
-        </div>
+        </Animate>
         <div className="flex items-stretch w-full mt-5 gap-7.5 flex-wrap justify-evenly">
           {faqs.map((faq, index) => (
-            <motion.div
-              variants={variant}
-              initial="inactive"
-              whileInView={"active"}
-              viewport={{ once: true }}
-              className="w-full"
-              key={index}
-            >
+            <Animate className="w-full" >
               <Accordion key={index} type="multiple" className="w-full">
                 <AccordionItem
                   value={`item-${index}`}
@@ -98,12 +78,12 @@ const Faqs = () => {
                   <AccordionTrigger className="py-4 md:text-[28px] text-sm text-primary-foreground font-bold text-left w-full flex justify-between items-center">
                     {faq.title}
                   </AccordionTrigger>
-                  <AccordionContent className="md:text-[22px] text-sm text-[#7B858A]">
+                  <AccordionContent className="md:text-[22px] text-left text-sm text-[#7B858A]">
                     {faq.description || "Answer coming soon..."}
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-            </motion.div>
+            </Animate>
           ))}
         </div>
       </div>

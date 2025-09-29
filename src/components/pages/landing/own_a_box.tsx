@@ -1,26 +1,32 @@
 import womanImage from "../../../assets/images/black-woman.svg";
 import arrowRightWhite from "../../../assets/icons/arrow-up-white.svg";
 import arrowRightBlack from "../../../assets/icons/arrowBlackIcon.svg";
+import arrowUpBlack from "../../../assets/icons/arrow up black.svg";
+import Animate from "@/components/animation/animate";
+import { useTheme } from "@/hooks/useTheme";
 const OwnABox = () => {
+    const {theme}= useTheme();
   const data = [
     {
       label: "Turn Spare Time Into Smart Income",
       desc: "Whether you're a student, artisan, or part-time worker, owning a box lets you earn passively without changing your routine.",
       color: "#053F44",
+      dark: "#121314",
+      darkText: "#EFF2F3",
     },
     { label: "Support Deliveries in Your Area", color: "#121314" },
-    { label: "Add a Box to Your Own Business", color: "#FFDD5F" },
     {
       label: "No Shop? You Have No Problem.",
       desc: "Even if you don’t run a business, you can own a box. It’s a smart, simple way to join the logistics network around you.",
       color: "#06545B",
     },
+    { label: "Add a Box to Your Own Business", color: "#FFDD5F" },
   ];
 
   return (
     <section className="py-10 sm:py-15 overflow-x-clip">
       <div className="max_width text-center flex items-center justify-center gap-10 flex-col">
-        <div className="flex items-center justify-center gap-2.5 flex-col">
+        <Animate className="flex items-center justify-center gap-2.5 flex-col">
           <p className="text-sm md:text-lg text-accent">
             OWN A BOX. MAKE AN IMPACT
           </p>
@@ -35,34 +41,57 @@ const OwnABox = () => {
             support deliveries in their area, and make logistics easier for
             their community.
           </p>
-        </div>
+        </Animate>
 
         <div className="flex items-center flex-col smedium:flex-row gap-10 justify-center">
-          <div className="flex-1 max-w-[647px]">
+          <Animate className="flex-1 sm:min-w-[430px] max-w-[647px]">
             <img src={womanImage} alt="" className="rounded-[50px]" />
-          </div>
-          <div className="grid items-start justify-start grid-flow-row-dense md:grid-cols-1 md:hidden grid-cols-2 grid-row-3 grid-flow-row-densemd:grid-cols-3">
+          </Animate>
+          <div className="grid smedium:hidden grid-cols-1 xxs:grid-cols-2 auto-row-[170px] gap-">
             {data.map((item, index) => (
-              <div
+              <Animate
                 style={{
-                  backgroundColor: item.color,
-                  color: item.color !== "#FFDD5F" ? "#EFF2F3" : "#121314",
+                  backgroundColor: 'red',
+                  color:
+                    theme === "dark"
+                      ? item.darkText
+                      : item.color !== "#FFDD5F"
+                      ? "#EFF2F3"
+                      : "#121314",
                 }}
                 key={index}
-                className={`${
-                  index === 0 || index === data.length - 1 ? "" : ""
-                } rounded-[21.33px] px-[21.3px] pt-[21.3px] pb-[32px] flex-1 flex-col items-start justify-center gap-5 bg-[${
-                  item.color
-                }] m-2 h-max min-w-[230px]`}
+                className={`
+        ${index === 0 || index === 2 ? "row-span-2" : "row-span-1"}
+        rounded-[21.33px]  bg-[${item.color}] px-[21.3px] pt-[21.3px] pb-[32px] 
+        flex flex-col items-start justify-between gap-3
+        m-2 sm:min-w-[230px]
+      `}
               >
-                <p className="md:text-[34.67px] font-semibold text-left text-[20px]">
-                  {item.label}
-                </p>
+                <div className="flex items-center justify-between">
+                  <p className="md:text-[34.67px] font-semibold text-left text-[20px]">
+                    {item.label}
+                  </p>
+                  {!(index + 1 === 1 || index === 2) && (
+                    <img
+                      src={
+                        item.color !== "#FFDD5F"
+                          ? arrowRightWhite
+                          : arrowUpBlack
+                      }
+                      alt=""
+                      className="max-w-[20.83px] w-full max-h-[20px]"
+                    />
+                  )}
+                </div>
 
-                <p className="text-sm text-left text-[#EFF2F3]">{item.desc}</p>
-                {index + (1 % 2) && (
-                  <div className="flex items-center justify-between">
-                    <p>Become an Owner</p>
+                {item.desc && (
+                  <p className="text-sm text-[#EFF2F3] text-left">
+                    {item.desc}
+                  </p>
+                )}
+                {(index + 1 === 1 || index === 2) && (
+                  <div className="flex items-center sm:gap-2 max-w-[160px] justify-between">
+                    <p className="whitespace-nowrap text-sm">Become an Owner</p>
 
                     <img
                       src={
@@ -71,23 +100,33 @@ const OwnABox = () => {
                           : arrowRightBlack
                       }
                       alt=""
-                      className=""
+                      className="max-w-[20.83px] max-h-[20px]"
                     />
                   </div>
                 )}
-              </div>
+              </Animate>
             ))}
           </div>
 
-          <div className="md:grid hidden grid-cols-1 xlarge:grid-cols-2 flex-1 items-center justify-center flex-wrap">
+          <div className="smedium:grid hidden grid-cols-1 xlarge:grid-cols-2 flex-1">
             {data.map((item, index) => (
-              <div
+              <Animate
                 style={{
-                  backgroundColor: item.color,
-                  color: item.color !== "#FFDD5F" ? "#EFF2F3" : "#121314",
+                  backgroundColor: theme === "dark" ? item.dark : item.color,
+                  color:
+                    theme === "dark"
+                      ? item.darkText
+                      : item.color !== "#FFDD5F"
+                      ? "#EFF2F3"
+                      : "#121314",
                 }}
                 key={index}
-                className={`rounded-[21.33px] px-[21.3px] pt-[21.3px] pb-[32px] flex-1 flex-col items-start justify-center gap-5 bg-[${item.color}] m-2 min-w-[230px]`}
+                className={`
+        ${index === 0 || index === 2 ? "row-span-2" : "row-span-1"}
+        rounded-[21.33px] px-[21.3px] pt-[21.3px] pb-[32px] 
+        flex flex-col items-start justify-between gap-3
+        m-2 sm:min-w-[230px]
+      `}
               >
                 <p className="md:text-[34.67px] font-semibold text-left text-[20px]">
                   {item.label}
@@ -106,7 +145,7 @@ const OwnABox = () => {
                     className=""
                   />
                 </div>
-              </div>
+              </Animate>
             ))}
           </div>
         </div>

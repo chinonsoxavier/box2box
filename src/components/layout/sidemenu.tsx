@@ -100,7 +100,7 @@ const SideMenu = () => {
         </Button>
       </div>
 
-      <img src={footerName} alt="footer name" className="w-full relative top-30" />
+      <img src={footerName} alt="footer name" className="w-full absolute bottom-0" />
     </div>
   );
 };
